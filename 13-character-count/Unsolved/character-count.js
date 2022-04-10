@@ -8,14 +8,15 @@ var characterCount = function(str) {
     for (i = 0; i < sortedArray.length; i++) {
 
         if (sortedArray[i] != sortedArray[i-1]) {
-            if (i > 0) {
-                let letter = sortedArray[i-1];
+            if (i > 0 || i === 0) {
+                let letter = sortedArray[i];
                 letterCount = [letter, count];
                 answer.push(letterCount);
-            }
+            } else {
             let letter = sortedArray[i];
             count = 1;
             letterCount = [letter, count];
+            }
         } else if (sortedArray[i] === sortedArray[i-1]) {
             letterCount[count] = letterCount[count]+1;
         } else if (i === sortedArray.length) {
@@ -24,7 +25,6 @@ var characterCount = function(str) {
             answer.push(letterCount);
             return answer;
         }
-        const finalArray = characterCount;
     }
     console.log(answer);
     return answer;
