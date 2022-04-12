@@ -8,21 +8,21 @@ const validBrackets = function(str) {
 
     if (char === "(" || char === "{" || char === "[") {
       stack.push(char);
-      continue;
+      // continue;
     }
     
     if (char === ")") {
       if (stack.pop() !== "(") {
         return false;
       }
-      continue;
+      // continue;
     } 
     
     if (char === "}") {
       if (stack.pop() !== "{") {
         return false;
       }
-      continue;
+      // continue;
     }
     
     if (char === "]") {
