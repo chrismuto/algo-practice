@@ -3,14 +3,12 @@
 const minIncrement = function(nums) {
     let total = 0;
     for (i = 0; i < nums.length; i++) {
-        console.log(nums[i]);
         for (j = i+1; j < nums.length; j++) {
             if (nums[i] === nums[j]) {
                 nums[j]++;
                 total++;
                 i = 0;
                 j = i+1;
-                console.log(total);
             }
         }
     }
