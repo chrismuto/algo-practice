@@ -7,9 +7,6 @@ var plusOne = function(digits) {
     for (i = 0; i < digits.length; i++) {
         numberDigits = numberDigits + (digits[i] * (10 ** (digits.length-1-i)));
     }
-    if (numberDigits === NaN) {
-        numberDigits === 0;
-    }
     numberDigits = numberDigits + 1;
     let stringDigits = numberDigits.toString();
     for (i = 0; i < stringDigits.length; i ++) {
