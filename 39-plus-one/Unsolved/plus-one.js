@@ -3,4 +3,17 @@
 // Solve without joining the digits array and modify the original array in place
 
 var plusOne = function(digits) {
+    let numberDigits = 0;
+    for (i = 0; i < digits.length; i++) {
+        numberDigits = numberDigits + (digits[i] * (10 ** (digits.length-1-i)));
+    }
+    if (numberDigits === NaN) {
+        numberDigits === 0;
+    }
+    numberDigits = numberDigits + 1;
+    let stringDigits = numberDigits.toString();
+    for (i = 0; i < stringDigits.length; i ++) {
+        digits[i] = parseInt(stringDigits[i]);
+    }
+    return digits;
 };
